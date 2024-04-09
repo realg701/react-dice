@@ -16,12 +16,6 @@ a {
   text-decoration: none;
 }
 
-/* .App {
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(40deg, #7303c0, #00b09b, #96c93d);
-} */
-
 /* AIO APPS */
 
 .aio-app {
@@ -53,11 +47,14 @@ a {
   width: 100%;
   height: inherit;
   cursor: default;
+  object-fit: contain;
+  object-position: 0 0;
 }
 
-/* .score {
-  width: 100%;
-} */
+.score div {
+  width: 290px;
+  height: 290px;
+}
 /* .cal-input {
   text-align: right;
   width: 100%;

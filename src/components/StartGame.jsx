@@ -1,12 +1,16 @@
-export default function StartGame() {
+export default function StartGame({ toggle }) {
   return (
     <>
       <div className="score">
         <h3>Start Game</h3>
-        <img src="/src/assets/start.jpg" alt="" />
+        <div>
+          <img src="/public/images/start.jpg" alt="" />
+        </div>
       </div>
       <div className="game-btns">
-        <button className="custom-btn">Start</button>
+        <button onClick={toggle} className="custom-btn">
+          Start
+        </button>
       </div>
     </>
   );
