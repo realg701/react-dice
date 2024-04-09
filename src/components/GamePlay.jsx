@@ -1,11 +1,12 @@
+import SelectButtons from "./SelectButtons";
+
 export default function GamePlay() {
   return (
     <>
       <div className="score">
         <h3>Total score: {30}</h3>
         <div>
-          <img src="/public/images/select-new.png" alt="" />
-          <div>{0}</div>
+          <SelectButtons />
         </div>
       </div>
       <div className="game-btns">
