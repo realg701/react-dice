@@ -48,7 +48,6 @@ a {
   height: inherit;
   cursor: default;
   object-fit: contain;
-  object-position: 0 0;
 }
 
 .score > div {
@@ -58,20 +57,19 @@ a {
 
 .select-btn {
   background: transparent;
-  border: none;
-  width: 70px;
-  height: 70px;
+  width: 70px !important;
+  height: 70px !important;
 }
 
 .game-btns {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  margin: 15px 0;
+  margin: 30px 0;
 }
 
 .custom-btn,
-.select-btns {
+.select-btn {
   border: none;
   width: 120px;
   height: 60px;
@@ -83,16 +81,16 @@ a {
   transition: all 0.3s;
 }
 .custom-btn:hover,
-.select-btns:hover {
+.select-btn:hover {
   background: coral;
   box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.16),
     0 3px 5px 3px rgba(0, 0, 0, 0.12);
 }
 
 .custom-btn:active,
-.select-btns:active {
-  /* background-color: #2ab6a6; */
-  opacity: 0.5;
+.select-btn:active {
+  background-color: #2ab6a6;
+  opacity: 0.7;
   box-shadow: unset;
   transition: unset;
 }
