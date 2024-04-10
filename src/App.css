@@ -50,15 +50,38 @@ a {
   object-fit: contain;
 }
 
+/* GamePlay */
 .score > div {
   width: 290px;
   height: 290px;
 }
 
+.select-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
 .select-btn {
   background: transparent;
-  width: 70px !important;
-  height: 70px !important;
+  width: 60px !important;
+  height: 60px !important;
+  margin-bottom: 15px;
+}
+.selected {
+  background-color: gold !important;
+}
+
+.dice-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.dice-container img {
+  width: 90px;
 }
 
 .game-btns {

@@ -1,39 +1,31 @@
 import { useState } from "react";
 
 export default function SelectButtons() {
-  const arrNum0 = [
-    "/public/images/1.png",
-    "/public/images/2.png",
-    "/public/images/3.png",
+  const arrNum = [
+    { images: "/public/images/dice/1.png", number: "1" },
+    { images: "/public/images/dice/2.png", number: "2" },
+    { images: "/public/images/dice/3.png", number: "3" },
+    { images: "/public/images/dice/4.png", number: "4" },
+    { images: "/public/images/dice/5.png", number: "5" },
+    { images: "/public/images/dice/6.png", number: "6" },
   ];
-  const arrNum1 = [
-    "/public/images/4.png",
-    "/public/images/5.png",
-    "/public/images/6.png",
-  ];
+
   const [selectedNumber, setSelectedNumber] = useState();
   console.log(selectedNumber);
   return (
     <>
-      <div className="game-btns">
-        {arrNum0.map((value, i) => (
+      <div className="select-btns">
+        {arrNum.map((value) => (
           <button
-            onClick={() => setSelectedNumber(value)}
-            className="select-btn"
-            key={i}
+            key={value.number}
+            className={
+              value.number == selectedNumber
+                ? "select-btn selected"
+                : "select-btn"
+            }
+            onClick={() => setSelectedNumber(value.number)}
           >
-            <img src={value} alt="" />
-          </button>
-        ))}
-      </div>
-      <div className="game-btns">
-        {arrNum1.map((value, i) => (
-          <button
-            onClick={() => setSelectedNumber(value)}
-            className="select-btn"
-            key={i}
-          >
-            <img src={value} alt="" />
+            <img src={value.images} alt="" />
           </button>
         ))}
       </div>

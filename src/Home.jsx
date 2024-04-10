@@ -7,6 +7,7 @@ export default function Game() {
   const [isGameStarted, setIsGameStarted] = useState(false);
   const toggleGamePlay = () => {
     setIsGameStarted((prev) => !prev);
+    console.log("Game Started");
   };
   return (
     <>

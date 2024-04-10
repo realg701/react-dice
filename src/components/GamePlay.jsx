@@ -1,3 +1,4 @@
+import RollDice from "./RollDice";
 import SelectButtons from "./SelectButtons";
 
 export default function GamePlay() {
@@ -7,6 +8,7 @@ export default function GamePlay() {
         <h3>Total score: {30}</h3>
         <div>
           <SelectButtons />
+          <RollDice />
         </div>
       </div>
       <div className="game-btns">
