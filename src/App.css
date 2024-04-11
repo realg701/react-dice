@@ -82,6 +82,7 @@ a {
 }
 .dice-container img {
   width: 90px;
+  cursor: pointer;
 }
 
 .game-btns {
