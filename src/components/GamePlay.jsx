@@ -40,8 +40,10 @@ export default function GamePlay() {
         </div>
       </div>
       <div className="game-btns">
-        <button className="spin-btn custom-btn">Spin</button>
-        <button className="reset-btn custom-btn">Reset</button>
+        <button className="spin-btn custom-btn">Result</button>
+        <button onClick={() => setScore(0)} className="reset-btn custom-btn">
+          Reset
+        </button>
       </div>
     </>
   );
