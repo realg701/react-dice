@@ -6,13 +6,14 @@ export default function GamePlay() {
   const [score, setScore] = useState(0);
   const [selectedNumber, setSelectedNumber] = useState();
   const [currentDice, setCurrentDice] = useState(0);
+  const [error, setError] = useState("");
 
   const generateRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
   };
   const rollDice = () => {
     const randomNumber = generateRandomNumber(1, 7);
-    if (!selectedNumber) return;
+
     setCurrentDice((prev) => randomNumber);
 
     if (selectedNumber == randomNumber) {
@@ -33,15 +34,25 @@ export default function GamePlay() {
             setSelectedNumber={setSelectedNumber}
           />
           <RollDice
-            currentDice={currentDice}
             rollDice={rollDice}
+            currentDice={currentDice}
+            setSelectedNumber={setSelectedNumber}
             selectedNumber={selectedNumber}
+            error={error}
+            setError={setError}
           />
         </div>
       </div>
       <div className="game-btns">
-        <button className="spin-btn custom-btn">Result</button>
-        <button onClick={() => setScore(0)} className="reset-btn custom-btn">
+        <button className="spin-btn custom-btn">Rules</button>
+        <button
+          onClick={() => {
+            setScore(0);
+            setSelectedNumber(undefined);
+            setCurrentDice(0);
+          }}
+          className="reset-btn custom-btn"
+        >
           Reset
         </button>
       </div>

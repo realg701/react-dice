@@ -4,10 +4,12 @@ export default function RollDice({ currentDice, rollDice, selectedNumber }) {
       <div className="dice-container">
         <img
           onClick={rollDice}
-          src={`/public/images/dice/${currentDice}.png`}
+          src={`/images/dice/${currentDice}.png`}
           alt={`dice ${currentDice}`}
         />
-        <p>{selectedNumber ? "Click on Dice to roll" : "Select a Number"}</p>
+        <p>
+          {selectedNumber ? "Click on Dice to roll" : "Select a Dice number"}
+        </p>
       </div>
     </>
   );
