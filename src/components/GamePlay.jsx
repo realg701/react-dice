@@ -1,6 +1,7 @@
 import { useState } from "react";
 import RollDice from "./RollDice";
 import SelectButtons from "./SelectButtons";
+import Rules from "./Rules";
 
 export default function GamePlay() {
   const [score, setScore] = useState(0);
@@ -24,6 +25,12 @@ export default function GamePlay() {
     setSelectedNumber(undefined);
   };
 
+  const resetButton = () => {
+    setScore(0);
+    setSelectedNumber(undefined);
+    setCurrentDice(0);
+  };
+
   return (
     <>
       <div className="score">
@@ -44,15 +51,8 @@ export default function GamePlay() {
         </div>
       </div>
       <div className="game-btns">
-        <button className="spin-btn custom-btn">Rules</button>
-        <button
-          onClick={() => {
-            setScore(0);
-            setSelectedNumber(undefined);
-            setCurrentDice(0);
-          }}
-          className="reset-btn custom-btn"
-        >
+        <Rules />
+        <button onClick={resetButton} className="reset-btn custom-btn">
           Reset
         </button>
       </div>

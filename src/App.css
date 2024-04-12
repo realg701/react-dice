@@ -123,6 +123,10 @@ a {
   background: rgb(38, 150, 38);
 }
 
+#modal-modal-description p {
+  margin-top: 15px;
+}
+
 .reset-btn {
   background: rgb(255, 51, 51);
 }
