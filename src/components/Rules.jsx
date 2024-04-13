@@ -43,8 +43,8 @@ export default function Rules() {
                 will be added as point to score
               </p>
               <p>
-                4. If if selected number is not equal to dice number 2 points
-                will be deducted from score
+                4. If selected number is not equal to dice number 2 points will
+                be deducted from score
               </p>
             </Typography>
           </Box>
