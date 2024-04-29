@@ -4,7 +4,7 @@ export default function RollDice({ currentDice, rollDice, selectedNumber }) {
       <div className="dice-container">
         <img
           onClick={rollDice}
-          src={`/images/dice/${currentDice}.png`}
+          src={`/react-dice/images/dice/${currentDice}.png`}
           alt={`dice ${currentDice}`}
         />
         <p>
